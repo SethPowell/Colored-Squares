@@ -5,16 +5,16 @@ export default class Squares extends Component {
     constructor(props) {
         super(props);
 
-        // this.state = {
-        //     squareColor: [0,0,0]
-        // }
+        this.state = {
+            squareColor: [0,0,0]
+        }
 
-        // this.changeColor = this.changeColor.bind(this)
+        this.changeColor = this.changeColor.bind(this)
     }
 
-    // changeColor() {
-    //     this.setState({})
-    // }
+    changeColor() {
+        this.setState({})
+    }
 
     render() {
         return (
