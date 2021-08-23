@@ -1,5 +1,15 @@
 .squares-container {
+    height: 80vh;
+    width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    // .square-container {
+    //     background-color: black;
+
+    //     &:hover {
+    //         background-color: white;
+    //     }
+    // }
 }
