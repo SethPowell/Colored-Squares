@@ -1,27 +1,32 @@
 import React, {Component} from "react";
-import colorFunc from "./colorFunc";
-// this page will just hold the layout for the actual square object
+
 export default class Square extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state ={
-            style: {backgroundColor: "#000000"}
+            color: {backgroundColor: "#000000"}
         }
 
-        this.changeColor = this.changeColor.bind(this)
+        this.generateRandomColor = this.generateRandomColor.bind(this)
     }
 
-    changeColor() {
-        colorFunc()
+    generateRandomColor() {
+        const hex = '0123456789abcdefABCDEF'
+        let randomList = '#'
+        for (let i=0 ; i<6 ; i++) {
+            let random = hex[Math.floor(Math.random() * hex.length)]
+            randomList += random
+        }
+        
         this.setState({
-            style: {backgroundColor: `${randomList}`}
+           color: {backgroundColor: randomList}
         })
     }
 
     render() {
         return (
-            <div className="square-container" style={this.state.style} onMouseEnter={() => this.changeColor()}>
+            <div className="square-container" style={this.state.color} id={this.props.id} onMouseOver={this.generateRandomColor}>
             </div>
         );
     }

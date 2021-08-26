@@ -1,8 +1,13 @@
 .app {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+
+    h1 {
+        padding: 3px;
+        margin: 0px;
+        border: none;
+    }
 }
 
 body {

@@ -1,15 +1,7 @@
-.squares-container {
-    height: 80vh;
-    width: 100vw;
+.squares-wrapper {
+    height: 95vh;
+    width: 80vw;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-
-    // .square-container {
-    //     background-color: black;
-
-    //     &:hover {
-    //         background-color: white;
-    //     }
-    // }
+    grid-template-columns: repeat(17, 0.8fr);
+    grid-template-rows: repeat(10, 1fr);
 }

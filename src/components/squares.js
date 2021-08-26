@@ -1,35 +1,20 @@
-import React, { Component } from "react";
-import { createDispatchHook } from "react-redux";
+import React from "react";
 import Square from "./square";
-// this page will layout all the squares on the page as well as handle the color change
-export default class Squares extends Component {
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            squareColor: [0,0,0]
+export default function squaresWrapper(props) {
+    const makeOneHundredSquares = () => {
+        const squaresArray = []
+        for (let i=0; i<170; i++) {
+            squaresArray.push(
+                <Square id={i} />
+            )
         }
-
-        this.changeColor = this.changeColor.bind(this)
-        this.makeOneHundredSquares = this.makeOneHundredSquares.bind(this)
+        return squaresArray
     }
 
-    changeColor() {
-        this.setState({})
-    }
-
-    makeOneHundredSquares() {
-        for (let i=0; i<100; i++) {
-            return <Square />
-        }
-        
-    }
-
-    render() {
-        return (
-            <div className="squares-container">
-                {makeOneHundredSquares()}
-            </div>
-        )
-    }
+    return (
+        <div className="squares-wrapper">
+            {makeOneHundredSquares()}
+        </div>
+    )
 }
