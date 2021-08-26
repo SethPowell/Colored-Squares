@@ -4,7 +4,7 @@ import Square from "./square";
 export default function squaresWrapper(props) {
     const makeOneHundredSquares = () => {
         const squaresArray = []
-        for (let i=0; i<170; i++) {
+        for (let i=0; i<190; i++) {
             squaresArray.push(
                 <Square id={i} />
             )
